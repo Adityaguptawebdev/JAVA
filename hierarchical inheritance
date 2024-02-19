@@ -1,0 +1,39 @@
+
+//hierarchical inheritance
+import java.util.Scanner;
+
+class A {
+    public void modulus(int a, int b) {
+        System.out.println("modulus opr is :" + (a % b));
+
+    }
+}
+
+class B extends A {
+    void multiplication(int a, int b) {
+        System.out.println("multiplication result is: " + a * b);
+    }
+}
+
+class C extends A {
+    void division(int a, int b) {
+        System.out.println("Dividion result is :" + a / b);
+    }
+}
+
+public class MyClass {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the first num :");
+        int num1 = sc.nextInt();
+        System.out.println("enter second num :");
+        int num2 = sc.nextInt();
+
+        B obj = new B();
+        C obj1 = new C();
+
+        obj.modulus(num1, num2);
+        obj.multiplication(num1, num2);
+        obj1.division(num1, num2);
+    }
+}
