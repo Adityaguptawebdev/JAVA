@@ -1,0 +1,24 @@
+
+//Inheritance
+class A {
+    void display() {
+        System.out.println("this is the base class msg");
+    }
+}
+
+class B extends A {
+    void display1() {
+        System.out.println("derived class content");
+    }
+}
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        B obj1 = new B();
+        obj1.display();
+        obj1.display1();
+    }
+}
+//this is the base class msg
+//derived class content
